@@ -1,0 +1,159 @@
+/* =#=#= Reset and General =#=#= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--whiteGray);
+  color: var(--darkGreen);
+  margin: 0;
+  font-family: var(--roboto);
+  font-weight: 300;
+  letter-spacing: .07em;
+}
+
+main {
+  width: clamp(300px, 85%, 800px);
+  margin: 0 auto;
+}
+
+h1, h2, h3, th {
+  font-family: var(--slabR);
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-align: center;
+}
+
+header,
+footer {
+  width: 100%;
+  box-shadow: var(--shShadow);
+}
+
+a {
+  color: var(--olive);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--darkGreen);
+}
+
+/* =#=#= Header/Title =#=#= */
+header {
+  background: var(--olive) url(https://www.transparenttextures.com/patterns/asfalt-dark.png);
+  color: var(--darkGreen);
+  padding: 2.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.byLine {
+  color: var(--lightGreen);
+  font-size: 1.25em;
+  opacity: .75;
+}
+
+/* =#=#= Table =#=#= */
+main h3 {
+  margin: -.5em 0;
+}
+
+table {
+  margin: 0 auto;
+  padding: 1.5em 1.25em;
+  border-spacing: 0;
+}
+
+tbody{
+  border-radius: var(--topTableRadius) var(--topTableRadius) var(--bottomTableRadius) var(--bottomTableRadius);
+  box-shadow: var(--shShadow);
+}
+
+/* Table Headers */
+th {
+  background: var(--darkGreen);
+  color: var(--olive);
+  padding: .5em;
+}
+
+th:nth-of-type(1) {
+  text-align: right;
+  border-top-left-radius: var(--topTableRadius);
+}
+
+th:nth-of-type(2) {
+  text-align: left;
+  border-top-right-radius: var(--topTableRadius);
+}
+
+/* Cells */
+td {
+  padding: .33em .5em;
+}
+
+/* First Colum */
+th:nth-of-type(1),
+td:nth-of-type(1) {
+  text-align: right;
+  border-right: 1px solid var(--olive);
+}
+
+/* Even Rows */
+tr:nth-child(even) {
+  background-color: var(--lightGreen);
+}
+
+/* Code */
+.monospaced {
+  font-family: var(--monoR);
+  font-weight: 500;
+}
+
+tr:last-of-type td:first-of-type {
+  border-bottom-left-radius: var(--bottomTableRadius);
+}
+
+tr:last-of-type td:last-of-type {
+  border-bottom-right-radius: var(--bottomTableRadius);
+}
+
+/* =#=#= Footer/Credit =#=#= */
+table:last-of-type {
+  padding-bottom: 5.5em;
+}
+
+footer {
+  background: var(--lightGreen);
+  position: fixed;
+  bottom: 0;
+  padding: 0 1.75em;
+  border-top: 1px solid var(--olive);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* =#=#= Variables =#=#= */
+:root {
+  --whiteGray: #D4D9D1;
+  --lightGray: #ABB3AB;
+  --lightGreen: #BAC4A7;
+  --olive: #697644;
+  --darkGreen: #233115;
+  --darkGray: #252D25;
+  --blackGray: #161915;
+
+  --shShadow:
+    0 0 .15em #252D2540,
+    0 .083em .5em #252D251A,
+    0 0 1em -.25em #252D2533;
+
+  --roboto: "Roboto", sans-serif;
+  --slabR: "Roboto Mono", monospace;
+  --monoR: "Roboto Slab", serif;
+
+  --topTableRadius: .5rem;
+  --bottomTableRadius: .25rem;
+}
